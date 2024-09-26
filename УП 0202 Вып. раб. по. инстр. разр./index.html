@@ -1,0 +1,1729 @@
+<!-- Этот файл не предназначен для просмотра!
+    Last Modified: Fri 11 Nov 2022 11:02 PM
+    Imported at 5:53 PM on Mon 6 Nov 2023
+-->
+<!doctype html>
+
+<html lang='ru'>
+    <head>
+        <meta charset='utf-8'>
+        <meta
+            name='viewport'
+            content='width=device-width, initial-scale=1.0'
+        >
+        <title>
+            Plain
+        </title>
+
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Mono:wght@300;400;500;600;700&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
+
+            * {
+                margin-top: 0;
+                margin-right: 0;
+                margin-bottom: 0;
+                margin-left: 0;
+                padding-top: 0;
+                padding-right: 0;
+                padding-bottom: 0;
+                padding-left: 0;
+            }
+            html {
+                min-width: auto;
+                max-width: 100vw;
+                min-height: 100vh;
+                max-height: max-content;
+                overflow-x: hidden;
+                overflow-y: auto;
+            }
+            body {
+                min-width: auto;
+                max-width: 100%;
+                min-height: 100vh;
+                max-height: max-content;
+            }
+            a { text-decoration: none; }
+            #legal {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                min-width: 100%;
+                max-width: 100%;
+                min-height: 100vh;
+                max-height: 100vh;
+                background: #6200ee;
+            }
+            #legal h1 {
+                font-family: 'Comfortaa';
+                font-size: 1.54rem;
+                font-weight: 700;
+                color: #ffffff;
+                text-transform: capitalize;
+            }
+            #legal p {
+                font-family: 'Red Hat Mono';
+                font-size: 0.5635em;
+                font-weight: 400;
+                color: #ffffff;
+                text-transform: uppercase;
+            }
+            #legal h1,
+            #legal p {
+                text-align: center;
+            }
+            .darkcyan {
+                background: darkcyan;
+                filter: invert(1);
+            }
+            .darkmagenta {
+                background: darkmagenta;
+                filter: invert(1);
+            }
+            .darkolivegreen {
+                background: darkolivegreen;
+                filter: invert(1);
+            }
+            .midnightblue {
+                background: midnightblue;
+                filter: invert(1);
+            }
+            .darkcyan_glow {
+                background: darkcyan;
+                filter: drop-shadow(0pt 1pt 3pt darkcyan) invert(1);
+            }
+            .darkmagenta_glow {
+                background: darkmagenta;
+                filter: drop-shadow(0pt 1pt 3pt darkmagenta) invert(1);
+            }
+            .darkolivegreen_glow {
+                background: darkolivegreen;
+                filter: drop-shadow(0pt 1pt 3pt darkolivegreen) invert(1);
+            }
+            .midnightblue_glow {
+                background: midnightblue;
+                filter: drop-shadow(0pt 1pt 3pt midnightblue) invert(1);
+            }
+            ul { min-width: 100%; }
+            li {
+                display: flex;
+                justify-content: space-between;
+                min-width: 100%;
+                font-family: 'Inter';
+                font-size: 1.2em;
+                list-style-type: none;
+            }
+            li.subtitle {
+                font-family: 'Inter';
+                font-size: 0.8em;
+            }
+            .sheet h1,
+            .sheet.interactive {
+                font-family: 'Inter';
+                font-size: 1.52em;
+                font-weight: 900;
+                color: #373737;
+            }
+            .sheet p,
+            .sheet.interactive {
+                font-family: 'Inter';
+                font-size: 0.8em;
+                font-weight: 400;
+            }
+            .information h1 {
+                min-width: 100%;
+                font-family: 'Inter';
+                font-size: 1.52em;
+                font-weight: 900;
+                color: #373737;
+            }
+            .information p {
+                font-family: 'Inter';
+                font-size: 0.7em;
+                font-weight: 400;
+                color: #7f7f7f;
+            }
+            .button {
+                font-family: 'Inter';
+                font-size: 0.73em;
+                font-weight: 500;
+                line-height: 1.1em;
+                color: #4c4c4c;
+                overflow-wrap: anywhere;
+            }
+            .message {
+                color: transparent;
+                padding-bottom: 0pt;
+                padding-top: 0pt;
+                font-family: 'Inter';
+                /* font-size:1em; */
+                font-weight: 800;
+            }
+            span.product {
+                min-width: max-content;
+                font-family: 'Inter';
+                font-weight: 700;
+                color: #6200ee;
+            }
+            #application {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                min-width: 100%;
+                min-height: 100vh;
+                max-height: max-content;
+                box-sizing: border-box;
+                margin-right: auto;
+                margin-left: auto;
+                padding-top: 8pt;
+                padding-right: 8pt;
+                padding-bottom: 8pt;
+                padding-left: 8pt;
+                background: #f2f2f7;
+            }
+            .sheet {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+                min-width: 100%;
+                max-width: 100%;
+                min-height: 149pt;
+                box-sizing: border-box;
+                padding-top: 0;
+                padding-right: 11pt;
+                padding-bottom: 0;
+                padding-left: 11pt;
+                margin-bottom: 7pt;
+                border-radius: 6pt;
+                background: #ffffff;
+                box-shadow: 0pt 0pt 7pt 1pt #e1e1e1;
+            }
+            .sheet.interactive {
+                justify-content: space-between;
+                min-width: 207pt;
+                max-width: 207pt;
+                min-height: 207pt;
+                padding-top: 19pt;
+                padding-bottom: 19pt;
+                padding-left: 19pt;
+                padding-right: 19pt;
+                margin-bottom: 0;
+                border-radius: 19pt;
+                box-shadow: inset 0px 0px 6pt 2pt #e3e3e5;
+            }
+            img {
+                margin-right: 7pt;
+                align-self: flex-start;
+            }
+            button {
+                all: unset;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: flex-start;
+                min-width: 103pt;
+                max-width: 103pt;
+                min-height: 91pt;
+                max-height: 91pt;
+                box-sizing: border-box;
+                margin-right: 6pt;
+                padding-top: 10pt;
+                padding-right: 14pt;
+                padding-bottom: 10pt;
+                padding-left: 14pt;
+                border-radius: 19pt;
+                box-shadow: inset 0px 0px 6pt 2pt #e7e7ee;
+            }
+            input {
+                all: unset;
+                margin-top: 9pt;
+                padding-top: 5pt;
+                padding-bottom: 5pt;
+                padding-left: 12pt;
+                padding-right: 12pt;
+                border: none;
+                border-radius: 17pt;
+                font-family: 'Inter';
+                font-size: 0.7em;
+                font-weight: 500;
+                text-align: start;
+                background-color: #F2F2F7;
+                color: #3d3d3d;
+            }
+            .information {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: flex-start;
+                min-width: 100%;
+                max-width: 100%;
+                min-height: max-content;
+                max-height: max-content;
+            }
+            .actions {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                min-width: 100%;
+                max-width: 100%;
+                min-height: max-content;
+                margin-top: 9pt;
+                overflow-x: auto;
+                overflow-y: hidden;
+            }
+            .back {
+                position: fixed;
+                bottom: 6pt;
+                left: 6pt;
+                display: flex;
+                background: #fff;
+                border-radius: 70pt;
+            }
+            ul {
+                min-width: 100%;
+            }
+            li {
+                display: flex;
+                justify-content: space-between;
+                min-width: 100%;
+                font-family: 'Inter';
+                font-size: 1.2em;
+                list-style-type: none;
+            }
+            li.subtitle {
+                font-family: 'Inter';
+                font-size: 0.8em;
+            }
+            .rounded {
+                padding: 5pt;
+                border-radius: 4pt;
+            }
+            .circled {
+                padding: 4pt;
+                border-radius: 50%;
+            }
+            .rounded,
+            .circled {
+                box-sizing: border-box;
+            }
+            .child_button {
+                all: unset;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: flex-start;
+                box-sizing: border-box;
+                margin-right: 6pt;
+                padding-top: 11pt;
+                padding-right: 24pt;
+                padding-bottom: 11pt;
+                padding-left: 24pt;
+                border-radius: 37pt;
+                background: #ffffff;
+                font-family: 'Inter';
+                font-size: 0.9em;
+                font-weight: 600;
+            }
+            #foundation_plate,
+            #cylinder_volume,
+            #parallelepiped_volume,
+            #lumber_volume_from_count,
+            #lumber_count_from_volume,
+            #bricks_per_cubic_meter {
+                display: none;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                min-width: 100%;
+                min-height: 100vh;
+                max-height: max-content;
+                box-sizing: border-box;
+                margin-right: auto;
+                margin-left: auto;
+                padding-top: 8pt;
+                padding-right: 8pt;
+                padding-bottom: 8pt;
+                padding-left: 8pt;
+                background: #f2f2f7;
+            }
+        </style>
+        <script>
+            window.addEventListener(
+                'load',
+                (event) =>
+                {
+                    /* Назнчает действие возврата определённым кнопкам */
+                    for (let node of document.getElementsByClassName('back'))
+                    {
+                        node.addEventListener(
+                            'click',
+                            (event) => {
+                            document
+                                .getElementById('application')
+                                    .style.display = 'flex';
+                            node.parentNode.style.display = 'none';
+                        }
+                        );
+                    }
+                    let application_names = {
+                        0:'foundation_plate',
+                        1:'bricks_per_cubic_meter',
+                        2:'lumber_count_from_volume',
+                        3:'lumber_volume_from_count',
+                        4:'cylinder_volume',
+                        5:'parallelepiped_volume'
+                    };
+                    /* Назнчает действие перехода на другой экран определённым кнопкам */
+                    for (let index = 0; index < 6; index += 1)
+                    {
+                        document
+                            .getElementById(index.toString())
+                                .addEventListener(
+                                    'click',
+                                    (event) =>
+                                    {
+                                        if (document.getElementById('legal') != null)
+                                        {
+                                            document.getElementById('legal').remove();
+                                        }
+                                        document
+                                            .getElementById('application')
+                                                .style.display = 'none';
+                                        document
+                                            .getElementById(application_names[index])
+                                                .style.display = 'flex';
+                                    }
+                                );
+                    }
+                }
+            );
+        </script>
+        <script>
+            window.addEventListener(
+                'load',
+                (event) => {
+                    let textBox_length = '';
+                    let textBox_width = '';
+                    let textBox_height = '';
+                    document.getElementsByClassName('input_bricks_per_cubic_meter')[0].addEventListener(
+                        'input',
+                        (event) => {
+                            if (event.data != null)
+                                textBox_length += event.data;
+                            else
+                                textBox_length = textBox_length.substring(0, textBox_length.length - 1);
+                        }
+                    );
+                    document.getElementsByClassName('input_bricks_per_cubic_meter')[1].addEventListener(
+                        'input',
+                        (event) => {
+                            if (event.data != null)
+                                textBox_width += event.data;
+                            else
+                                textBox_width = textBox_width.substring(0, textBox_width.length - 1);
+                        }
+                    );
+                    document.getElementsByClassName('input_bricks_per_cubic_meter')[2].addEventListener(
+                        'input',
+                        (event) => {
+                            if (event.data != null)
+                                textBox_height += event.data;
+                            else
+                                textBox_height = textBox_height.substring(0, textBox_height.length - 1);
+                        }
+                    );
+                    let length = 0.0;
+                    let width = 0.0;
+                    let height = 0.0;
+                    document.getElementById('bricks_per_cubic_meter_button').addEventListener('click',
+                        (event) => {
+                            if (textBox_length.length == 0 || textBox_width.length == 0 || textBox_height.length == 0)
+                            {
+                                document.getElementsByClassName('message')[0].style.color = '#e52424';
+                                if (textBox_length.length == 0)
+                                    document.getElementsByClassName('message')[0].innerText = 'Введите длину';
+                                if (textBox_width.length == 0)
+                                    document.getElementsByClassName('message')[0].innerText = 'Введите ширину';
+                                if (textBox_height.length == 0)
+                                    document.getElementsByClassName('message')[0].innerText = 'Введите высоту';
+                            }
+                            else
+                                document.getElementsByClassName('message')[0].style.color = '#0000';
+                            length = Number(textBox_length);
+                            width = Number(textBox_width);
+                            height = Number(textBox_height);
+                            document.getElementById('brick_count_per_cubic_meter').innerText = (1 / ((length * width * height) / (10 ** 9)));
+                            document.getElementById('brick_count_per_cubic_meter').innerText += ' шт';
+                        }
+                    );
+                }
+            );
+        </script>
+        <script>
+            window.addEventListener(
+                'load',
+                (event) => {
+                    let textBox_height = '';
+                    let textBox_width = '';
+                    let textBox_depth = '';
+                    let textBox_lumber_count = '';
+                    let textBox_price_per_cubic_meter = '';
+                    document.getElementsByClassName('lumber_count_from_volume')[0].addEventListener(
+                        'focus',
+                        (event) => {
+                            textBox_height = '';
+                        }
+                    );
+                    document.getElementsByClassName('lumber_count_from_volume')[0].addEventListener(
+                        'input',
+                        (event) => {
+                            if (event.data != null)
+                                textBox_height += event.data;
+                            else
+                                textBox_height = textBox_height.substring(0, textBox_height.length - 1);
+                        }
+                    );
+                    document.getElementsByClassName('lumber_count_from_volume')[1].addEventListener(
+                        'focus',
+                        (event) => {
+                            textBox_width = '';
+                        }
+                    );
+                    document.getElementsByClassName('lumber_count_from_volume')[1].addEventListener(
+                        'input',
+                        (event) => {
+                            if (event.data != null)
+                                textBox_width += event.data;
+                            else
+                                textBox_width = textBox_width.substring(0, textBox_width.length - 1);
+                        }
+                    );
+                    document.getElementsByClassName('lumber_count_from_volume')[2].addEventListener(
+                        'focus',
+                        (event) => {
+                            textBox_depth = '';
+                        }
+                    );
+                    document.getElementsByClassName('lumber_count_from_volume')[2].addEventListener(
+                        'input',
+                        (event) => {
+                            if (event.data != null)
+                                textBox_depth += event.data;
+                            else
+                                textBox_depth = textBox_depth.substring(0, textBox_depth.length - 1);
+                        }
+                    );
+                    document.getElementsByClassName('lumber_count_from_volume')[3].addEventListener(
+                        'focus',
+                        (event) => {
+                            textBox_lumber_count = '';
+                        }
+                    );
+                    document.getElementsByClassName('lumber_count_from_volume')[3].addEventListener(
+                        'input',
+                        (event) => {
+                            if (event.data != null)
+                                textBox_lumber_count += event.data;
+                            else
+                                textBox_lumber_count = textBox_lumber_count.substring(0, textBox_lumber_count.length - 1);
+                        }
+                    );
+                    document.getElementsByClassName('lumber_count_from_volume')[4].addEventListener(
+                        'focus',
+                        (event) => { textBox_price_per_cubic_meter = ''; }
+                    );
+                    document.getElementsByClassName('lumber_count_from_volume')[4].addEventListener(
+                        'input',
+                        (event) => {
+                            if (event.data != null)
+                                textBox_price_per_cubic_meter += event.data;
+                            else
+                                textBox_price_per_cubic_meter = textBox_price_per_cubic_meter.substring(0, textBox_price_per_cubic_meter.length - 1);
+                        }
+                    );
+                    let height = 0.0;
+                    let width = 0.0;
+                    let depth = 0.0;
+                    let count = 0.0;
+                    let price = 0.0;
+                    document.getElementById('lumber_count_from_volume_button').addEventListener('click',
+                        (event) => {
+                            if (textBox_height.length == 0 || textBox_width.length == 0 || textBox_depth.length == 0) {
+                                document.getElementsByClassName('message')[0].style.color = '#e52424';
+                                if (textBox_height.length == 0)
+                                    document.getElementsByClassName('message')[0].innerText = 'Введите высоту';
+                                if (textBox_width.length == 0)
+                                    document.getElementsByClassName('message')[0].innerText = 'Введите ширину';
+                                if (textBox_depth.length == 0)
+                                    document.getElementsByClassName('message')[0].innerText = 'Введите глубину';
+                                if (textBox_lumber_count.length == 0)
+                                    document.getElementsByClassName('message')[0].innerText = 'Введите количество';
+                                if (textBox_lumber_count.length == 0)
+                                    document.getElementsByClassName('message')[0].innerText = 'Введите стоимость за кубический метр';
+                            }
+                            else
+                                document.getElementsByClassName('message')[0].style.color = '#0000';
+                            height = Number(textBox_height);
+                            width = Number(textBox_width);
+                            depth = Number(textBox_depth);
+                            count = Number(textBox_lumber_count);
+                            price = Number(textBox_price_per_cubic_meter);
+                            let lumber_volume = height * width * depth;
+                            let lumber_count_per_cubic_meter = 1 / (lumber_volume);
+                            let lumber_volume_in_specified_volume = lumber_count_per_cubic_meter * count;
+                            let lumber_price = lumber_volume * price;
+                            let material_price = count * lumber_price;
+                            document.getElementById('lumber_count_per_cubic_meter_0').innerText = lumber_count_per_cubic_meter;
+                            document.getElementById('lumber_count_per_cubic_meter_0').innerText += ' шт';
+                            document.getElementById('lumber_volume').innerText = lumber_volume;
+                            document.getElementById('lumber_volume').innerText += ' м.³';
+                            document.getElementById('lumber_volume_in_specified_volume').innerText = lumber_volume_in_specified_volume;
+                            document.getElementById('lumber_volume_in_specified_volume').innerText += ' ед';
+                            document.getElementById('lumber_price_0').innerText = lumber_price;
+                            document.getElementById('lumber_price_0').innerText += ' руб.';
+                        }
+                    );
+                }
+            );
+        </script>
+        <script>
+            window.addEventListener(
+                'load',
+                (event) => {
+                    let textBox_height = '';
+                    let textBox_width = '';
+                    let textBox_depth = '';
+                    let textBox_lumber_count = '';
+                    let textBox_price_per_cubic_meter = '';
+                    document.getElementsByClassName('lumber_volume_from_count_button')[0].addEventListener(
+                        'focus',
+                        (event) => {
+                            textBox_height = '';
+                        }
+                    );
+                    document.getElementsByClassName('lumber_volume_from_count_button')[0].addEventListener(
+                        'input',
+                        (event) => {
+                            if (event.data != null)
+                                textBox_height += event.data;
+                            else
+                                textBox_height = textBox_height.substring(0, textBox_height.length - 1);
+                        }
+                    );
+                    document.getElementsByClassName('lumber_volume_from_count_button')[1].addEventListener(
+                        'focus',
+                        (event) => {
+                            textBox_width = '';
+                        }
+                    );
+                    document.getElementsByClassName('lumber_volume_from_count_button')[1].addEventListener(
+                        'input',
+                        (event) => {
+                            if (event.data != null)
+                                textBox_width += event.data;
+                            else
+                                textBox_width = textBox_width.substring(0, textBox_width.length - 1);
+                        }
+                    );
+                    document.getElementsByClassName('lumber_volume_from_count_button')[2].addEventListener(
+                        'focus',
+                        (event) => {
+                            textBox_depth = '';
+                        }
+                    );
+                    document.getElementsByClassName('lumber_volume_from_count_button')[2].addEventListener(
+                        'input',
+                        (event) => {
+                            if (event.data != null)
+                                textBox_depth += event.data;
+                            else
+                                textBox_depth = textBox_depth.substring(0, textBox_depth.length - 1);
+                        }
+                    );
+                    document.getElementsByClassName('lumber_volume_from_count_button')[3].addEventListener(
+                        'focus',
+                        (event) => {
+                            textBox_lumber_count = '';
+                        }
+                    );
+                    document.getElementsByClassName('lumber_volume_from_count_button')[3].addEventListener(
+                        'input',
+                        (event) => {
+                            if (event.data != null)
+                                textBox_lumber_count += event.data;
+                            else
+                                textBox_lumber_count = textBox_lumber_count.substring(0, textBox_lumber_count.length - 1);
+                        }
+                    );
+                    document.getElementsByClassName('lumber_volume_from_count_button')[4].addEventListener(
+                        'focus',
+                        (event) => {
+                            textBox_price_per_cubic_meter = '';
+                        }
+                    );
+                    document.getElementsByClassName('lumber_volume_from_count_button')[4].addEventListener(
+                        'input',
+                        (event) => {
+                            if (event.data != null)
+                                textBox_price_per_cubic_meter += event.data;
+                            else
+                                textBox_price_per_cubic_meter = textBox_price_per_cubic_meter.substring(0, textBox_price_per_cubic_meter.length - 1);
+                        }
+                    );
+                    let height = 0.0;
+                    let width = 0.0;
+                    let depth = 0.0;
+                    let count = 0.0;
+                    let price = 0.0;
+                    document.getElementById('lumber_volume_from_count_button').addEventListener('click',
+                        (event) => {
+                            if (textBox_height.length == 0 || textBox_width.length == 0 || textBox_depth.length == 0) {
+                                document.getElementsByClassName('message')[0].style.color = '#e52424';
+                                if (textBox_height.length == 0)
+                                    document.getElementsByClassName('message')[0].innerText = 'Введите высоту';
+                                if (textBox_width.length == 0)
+                                    document.getElementsByClassName('message')[0].innerText = 'Введите ширину';
+                                if (textBox_depth.length == 0)
+                                    document.getElementsByClassName('message')[0].innerText = 'Введите глубину';
+                                if (textBox_lumber_count.length == 0)
+                                    document.getElementsByClassName('message')[0].innerText = 'Введите количество';
+                                if (textBox_lumber_count.length == 0)
+                                    document.getElementsByClassName('message')[0].innerText = 'Введите стоимость за кубический метр';
+                            }
+                            else
+                                document.getElementsByClassName('message')[0].style.color = '#0000';
+                            height = Number(textBox_height);
+                            width = Number(textBox_width);
+                            depth = Number(textBox_depth);
+                            count = Number(textBox_lumber_count);
+                            price = Number(textBox_price_per_cubic_meter);
+                            let lumber_volume = height * width * depth;
+                            let lumber_count_per_cubic_meter = 1 / (lumber_volume);
+                            let lumber_volume_all = lumber_volume * count;
+                            let lumber_price = lumber_volume * price;
+                            let material_price = count * lumber_price;
+                            document.getElementById('lumber_count_per_cubic_meter').innerText = lumber_count_per_cubic_meter;
+                            document.getElementById('lumber_count_per_cubic_meter').innerText += ' шт';
+                            document.getElementById('lumber_volume_value').innerText = lumber_volume;
+                            document.getElementById('lumber_volume_value').innerText += ' м.³';
+                            document.getElementById('lumber_volume_all').innerText = lumber_volume_all;
+                            document.getElementById('lumber_volume_all').innerText += ' м.³';
+                            document.getElementById('lumber_price').innerText = lumber_price;
+                            document.getElementById('lumber_price').innerText += ' руб.';
+                            document.getElementById('material_price').innerText = material_price;
+                            document.getElementById('material_price').innerText += ' руб';
+                        }
+                    );
+                }
+            );
+        </script>
+        <script>
+            window.addEventListener(
+                'load',
+                (event) => {
+                    let textBox_width = '';
+                    let textBox_height = '';
+                    let textBox_depth = '';
+                    let textBox_liquid_level = '';
+                    document.getElementsByClassName('parallelepiped_volume')[0].addEventListener(
+                        'focus',
+                        (event) => {
+                            textBox_width = '';
+                        }
+                    );
+                    document.getElementsByClassName('parallelepiped_volume')[0].addEventListener(
+                        'input',
+                        (event) => {
+                            if (event.data != null)
+                                textBox_width += event.data;
+                            else
+                                textBox_width = textBox_width.substring(0, textBox_width.length - 1);
+                        }
+                    );
+                    document.getElementsByClassName('parallelepiped_volume')[1].addEventListener(
+                        'focus',
+                        (event) => {
+                            textBox_height = '';
+                        }
+                    );
+                    document.getElementsByClassName('parallelepiped_volume')[1].addEventListener(
+                        'input',
+                        (event) => {
+                            if (event.data != null)
+                                textBox_height += event.data;
+                            else
+                                textBox_height = textBox_height.substring(0, textBox_height.length - 1);
+                        }
+                    );
+                    document.getElementsByClassName('parallelepiped_volume')[2].addEventListener(
+                        'focus',
+                        (event) => {
+                            textBox_depth = '';
+                        }
+                    );
+                    document.getElementsByClassName('parallelepiped_volume')[2].addEventListener(
+                        'input',
+                        (event) => {
+                            if (event.data != null)
+                                textBox_depth += event.data;
+                            else
+                                textBox_depth = textBox_depth.substring(0, textBox_depth.length - 1);
+                        }
+                    );
+                    document.getElementsByClassName('parallelepiped_volume')[3].addEventListener(
+                        'focus',
+                        (event) => {
+                            textBox_liquid_level = '';
+                        }
+                    );
+                    document.getElementsByClassName('parallelepiped_volume')[3].addEventListener(
+                        'input',
+                        (event) => {
+                            if (event.data != null)
+                                textBox_liquid_level += event.data;
+                            else
+                                textBox_liquid_level = textBox_liquid_level.substring(0, textBox_liquid_level.length - 1);
+                        }
+                    );
+                    let width = 0.0;
+                    let height = 0.0;
+                    let depth = 0.0;
+                    let liquid_level = 0.0;
+                    document.getElementById('parallelepiped_volume_button').addEventListener('click',
+                        (event) => {
+                            if (textBox_width.length == 0 || textBox_height.length == 0 || textBox_depth.length == 0) {
+                                document.getElementsByClassName('message')[0].style.color = '#e52424';
+                                if (textBox_width.length == 0)
+                                    document.getElementsByClassName('message')[0].innerText = 'Введите ширину';
+                                if (textBox_height.length == 0)
+                                    document.getElementsByClassName('message')[0].innerText = 'Введите высота';
+                                if (textBox_depth.length == 0)
+                                    document.getElementsByClassName('message')[0].innerText = 'Введите глубину';
+                                if (textBox_liquid_level.length == 0)
+                                    document.getElementsByClassName('message')[0].innerText = 'Введите уровень жидкости';
+                            }
+                            else
+                                document.getElementsByClassName('message')[0].style.color = '#0000';
+                            width = Number(textBox_width);
+                            height = Number(textBox_height);
+                            depth = Number(textBox_depth);
+                            liquid_level = Number(textBox_liquid_level);
+                            let volume = width * height * depth;
+                            let liquid_volume = Number(width * height * liquid_level);
+                            let remaining_volume = (volume - liquid_volume);
+                            document.getElementById('volume').innerText = volume;
+                            document.getElementById('volume').innerText += ' м.³';
+                            document.getElementById('liquid_volume_0').innerText = liquid_volume;
+                            document.getElementById('liquid_volume_0').innerText += ' м.³';
+                            document.getElementById('remaining_volume').innerText = remaining_volume;
+                            document.getElementById('remaining_volume').innerText += ' м.³';
+                        }
+                    );
+                }
+            );
+        </script>
+        <script>
+            window.addEventListener(
+                'load',
+                (event) => {
+                    let textBox_diameter = '';
+                    let textBox_height = '';
+                    let textBox_liquid_level = '';
+                    document.getElementsByClassName('cylinder_volume')[0].addEventListener(
+                        'focus',
+                        (event) => {
+                            textBox_diameter = '';
+                        }
+                    );
+                    document.getElementsByClassName('cylinder_volume')[0].addEventListener(
+                        'input',
+                        (event) => {
+                            if (event.data != null)
+                                textBox_diameter += event.data;
+                            else
+                                textBox_diameter = textBox_diameter.substring(0, textBox_diameter.length - 1);
+                        }
+                    );
+                    document.getElementsByClassName('cylinder_volume')[1].addEventListener(
+                        'focus',
+                        (event) => {
+                            textBox_height = '';
+                        }
+                    );
+                    document.getElementsByClassName('cylinder_volume')[1].addEventListener(
+                        'input',
+                        (event) => {
+                            if (event.data != null)
+                                textBox_height += event.data;
+                            else
+                                textBox_height = textBox_height.substring(0, textBox_height.length - 1);
+                        }
+                    );
+                    document.getElementsByClassName('cylinder_volume')[2].addEventListener(
+                        'focus',
+                        (event) => {
+                            textBox_liquid_level = '';
+                        }
+                    );
+                    document.getElementsByClassName('cylinder_volume')[2].addEventListener(
+                        'input',
+                        (event) => {
+                            if (event.data != null)
+                                textBox_liquid_level += event.data;
+                            else
+                                textBox_liquid_level = textBox_liquid_level.substring(0, textBox_liquid_level.length - 1);
+                        }
+                    );
+                    let diameter = 0.0;
+                    let height = 0.0;
+                    let liquid_level = 0.0;
+                    let density = 0.0;
+                    document.getElementById('cylinder_volume_button').addEventListener('click',
+                        (event) => {
+                            if (textBox_diameter.length == 0 || textBox_height.length == 0 || textBox_liquid_level.length == 0) {
+                                document.getElementsByClassName('message')[0].style.color = '#e52424';
+                                if (textBox_diameter.length == 0)
+                                    document.getElementsByClassName('message')[0].innerText = 'Введите диаметр';
+                                if (textBox_height.length == 0)
+                                    document.getElementsByClassName('message')[0].innerText = 'Введите высота';
+                                if (textBox_liquid_level.length == 0)
+                                    document.getElementsByClassName('message')[0].innerText = 'Введите уровень жидкости';
+                            }
+                            else
+                                document.getElementsByClassName('message')[0].style.color = '#0000';
+                            diameter = Number(textBox_diameter);
+                            height = Number(textBox_height);
+                            liquid_level = Number(textBox_liquid_level);
+                            const cylinder_volume = 3.14 * Math.pow(diameter / 2, 2) * height;
+                            const area_of_base = (3.14 * (diameter ** 2)) / 4;
+                            const area_of_side_surface = 3.14 * diameter * height;
+                            const liquid_volume = 3.14 * ((diameter / 2) ** 2) * height;
+                            document.getElementById('cylinder_volume_0')
+                                .innerText = cylinder_volume;
+                            document.getElementById('cylinder_volume_0').innerText += ' м.³';
+                            document.getElementById('area_of_base')
+                                .innerText = area_of_base;
+                            document.getElementById('area_of_base').innerText += ' м.²';
+                            document.getElementById('area_of_side_surface')
+                                .innerText = area_of_side_surface;
+                            document.getElementById('area_of_side_surface').innerText += ' м.²';
+                            document.getElementById('liquid_volume')
+                                .innerText = liquid_volume;
+                            document.getElementById('liquid_volume').innerText += ' м.³';
+                        }
+                    );
+                }
+            );
+        </script>
+        <script>
+            window.addEventListener(
+                'load',
+                (event) => {
+                    let textBox_width = '';
+                    let textBox_height = '';
+                    let textBox_depth = '';
+                    document.getElementsByClassName('foundation_plate')[0].addEventListener(
+                        'focus',
+                        (event) => {
+                            textBox_width = '';
+                        }
+                    );
+                    document.getElementsByClassName('foundation_plate')[0].addEventListener(
+                        'input',
+                        (event) => {
+                            if (event.data != null)
+                                textBox_width += event.data;
+                            else
+                                textBox_width = textBox_width.substring(0, textBox_width.length - 1);
+                        }
+                    );
+                    document.getElementsByClassName('foundation_plate')[1].addEventListener(
+                        'focus',
+                        (event) => {
+                            textBox_height = '';
+                        }
+                    );
+                    document.getElementsByClassName('foundation_plate')[1].addEventListener(
+                        'input',
+                        (event) => {
+                            if (event.data != null)
+                                textBox_height += event.data;
+                            else
+                                textBox_height = textBox_height.substring(0, textBox_height.length - 1);
+                        }
+                    );
+                    document.getElementsByClassName('foundation_plate')[2].addEventListener(
+                        'focus',
+                        (event) => {
+                            textBox_depth = '';
+                        }
+                    );
+                    document.getElementsByClassName('foundation_plate')[2].addEventListener(
+                        'input',
+                        (event) => {
+                            if (event.data != null)
+                                textBox_depth += event.data;
+                            else
+                                textBox_depth = textBox_depth.substring(0, textBox_depth.length - 1);
+                        }
+                    );
+                    let width = 0.0;
+                    let height = 0.0;
+                    let depth = 0.0;
+                    document.getElementById('foundation_plate_button').addEventListener(
+                        'click',
+                        (event) => {
+                            if (textBox_width.length == 0 || textBox_height.length == 0 || textBox_depth.length == 0) {
+                                document.getElementsByClassName('message')[0].style.color = '#e52424';
+                                if (textBox_width.length == 0)
+                                    document.getElementsByClassName('message')[0].innerText = 'Введите ширину';
+                                if (textBox_height.length == 0)
+                                    document.getElementsByClassName('message')[0].innerText = 'Введите длину';
+                                if (textBox_depth.length == 0)
+                                    document.getElementsByClassName('message')[0].innerText = 'Введите толщину';
+                            }
+                            else
+                                document.getElementsByClassName('message')[0].style.color = '#0000';
+                            width = Number(textBox_width);
+                            height = Number(textBox_height);
+                            depth = Number(textBox_depth);
+                            const perimeter_of_concrete_base = (width + height) * 2.0;
+                            const area_of_concrete_base = width * height;
+                            const area_of_side_surface = 2.0 * depth * (width + height);
+                            const concrete_volume = area_of_concrete_base * depth;
+                            document.getElementById('perimeter_of_concrete_base')
+                                .innerText = perimeter_of_concrete_base;
+                            document.getElementById('perimeter_of_concrete_base').innerText += ' м.';
+                            document.getElementById('area_of_concrete_base')
+                                .innerText = area_of_concrete_base;
+                            document.getElementById('area_of_concrete_base').innerText += ' м.²';
+                            document.getElementById('foundation_plate_area_of_side_surface')
+                                .innerText = area_of_side_surface;
+                            document.getElementById('foundation_plate_area_of_side_surface').innerText += ' м.²';
+                            document.getElementById('concrete_volume')
+                                .innerText = concrete_volume;
+                            document.getElementById('concrete_volume').innerText += ' м.³';
+                        }
+                    );
+                }
+            );
+        </script>
+    </head>
+
+    <body>
+        <div id='legal'>
+            <h1>
+                Petrov Vladimir Leonidovich
+            </h1>
+            <p>
+                Copyright © 2022 Petrov Vladimir Leonidovich.
+                All rights reserved.
+            </p>
+        </div>
+        <div id='application'>
+            <div class='sheet'>
+                <div class='information'>
+                    <img
+                        src='https://partneroff.pro/img/no_image_2.png'
+                        width='47'
+                        height='47'
+                        class='rounded darkolivegreen'
+                        alt='img'
+                    >
+                    <div style='display:flex; flex-direction:column; justify-content:space-between; min-height:35pt;'>
+                        <h1>
+                            Фундамент и бетон
+                        </h1>
+                        <p>
+                            Ленточный фундамент и фундаментная плита
+                        </p>
+                    </div>
+                </div>
+                <div class='actions'>
+                    <a href='#foundation_plate'>
+                        <button
+                            id='0'
+                            class='button'
+                        >
+                            <img
+                                src='https://img.icons8.com/material-two-tone/2x/lightning-bolt--v2.png'
+                                width='29'
+                                height='29'
+                                class='circled darkolivegreen_glow'
+                                alt='img'
+                            >
+                            Рассчитать фундаментную плиту
+                        </button>
+                    </a>
+                </div>
+            </div>
+            <div class='sheet'>
+                <div class='information'>
+                    <img
+                        src='https://partneroff.pro/img/no_image_2.png'
+                        width='47'
+                        height='47'
+                        class='rounded midnightblue'
+                        alt='img'
+                    >
+                    <div style='display:flex; flex-direction:column; justify-content:space-between; min-height:35pt;'>
+                        <h1>
+                            Стены
+                        </h1>
+                        <p>
+                            Блоки, кирпичи, кол-во блоков в кубе
+                        </p>
+                    </div>
+                </div>
+                <div class='actions'>
+                    <a href='#bricks_per_cubic_meter'>
+                        <button
+                            id='1'
+                            class='button'
+                        >
+                            <img
+                                src='https://img.icons8.com/material-two-tone/2x/lightning-bolt--v2.png'
+                                width='29'
+                                height='29'
+                                class='circled midnightblue_glow'
+                                alt='img'
+                            >
+                            Рассчитать количество кирпичей в кубическом метре
+                        </button>
+                    </a>
+                </div>
+            </div>
+            <div class='sheet'>
+                <div class='information'>
+                    <img
+                        src='https://partneroff.pro/img/no_image_2.png'
+                        width='47'
+                        height='47'
+                        class='rounded darkcyan'
+                        alt='img'
+                    >
+                    <div style='display:flex; flex-direction:column; justify-content:space-between; min-height:35pt;'>
+                        <h1>
+                            Пиломатериалы
+                        </h1>
+                        <p>
+                            Количество по объёму, объём по количеству
+                        </p>
+                    </div>
+                </div>
+                <div class='actions'>
+                    <a href='#lumber_count_from_volume'>
+                        <button
+                            id='2'
+                            class='button'
+                        >
+                            <img
+                                src='https://img.icons8.com/material-two-tone/2x/lightning-bolt--v2.png'
+                                width='29'
+                                height='29'
+                                class='circled darkcyan_glow'
+                                alt='img'
+                            >
+                            Рассчитать количество пиломатериалов по объёму
+                        </button>
+                    </a>
+                    <a href='#lumber_volume_from_count'>
+                        <button
+                            id='3'
+                            class='button'
+                        >
+                            <img
+                                src='https://img.icons8.com/material-two-tone/2x/lightning-bolt--v2.png'
+                                width='29'
+                                height='29'
+                                class='circled darkcyan_glow'
+                                alt='img'
+                            >
+                            Рассчитать объём пиломатериалов по количеству
+                        </button>
+                    </a>
+                </div>
+            </div>
+            <div class='sheet'>
+                <div class='information'>
+                    <img
+                        src='https://partneroff.pro/img/no_image_2.png'
+                        width='47'
+                        height='47'
+                        class='rounded darkmagenta'
+                        alt='img'
+                    >
+                    <div style='display:flex; flex-direction:column; justify-content:space-between; min-height:35pt;'>
+                        <h1>
+                            Объёмы
+                        </h1>
+                        <p>
+                            Цилиндр и параллелепипед
+                        </p>
+                    </div>
+                </div>
+                <div class='actions'>
+                    <a href='#cylinder_volume'>
+                        <button
+                            id='4'
+                            class='button'
+                        >
+                            <img
+                                src='https://img.icons8.com/material-two-tone/2x/lightning-bolt--v2.png'
+                                width='29'
+                                height='29'
+                                class='circled darkmagenta_glow'
+                                alt='img'
+                            >
+                            Рассчитать цилиндр
+                        </button>
+                    </a>
+                    <a href='#parallelepiped_volume'>
+                        <button
+                            id='5'
+                            class='button'
+                        >
+                            <img
+                                src='https://img.icons8.com/material-two-tone/2x/lightning-bolt--v2.png'
+                                width='29'
+                                height='29'
+                                class='circled darkmagenta_glow'
+                                alt='img'
+                            >
+                            Рассчитать параллелепипед
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id='foundation_plate'>
+            <div class='back'>
+                <a href='#application'>
+                    <img
+                        src='https://img.icons8.com/fluency-systems-filled/2x/arrow-pointing-left.png'
+                        width='48'
+                        height='48'
+                        style='box-sizing: border-box; margin: 0; padding: 6pt;'
+                        alt='img'
+                    >
+                </a>
+            </div>
+            <div class='sheet interactive'>
+                <img
+                    src='https://img.icons8.com/material-two-tone/2x/lightning-bolt--v2.png'
+                    width='34'
+                    height='34'
+                    class='circled darkolivegreen'
+                    alt='img'
+                >
+                <h1>
+                    Фундаментная плита
+                </h1>
+                <p class='message'>Сообщение об ошибке</p>
+                <ul>
+                    <li><input
+                            type='number'
+                            class='foundation_plate subtitle'
+                            placeholder='Ширина'
+                        >
+                    </li>
+                    <li class='subtitle'>единицей измерения является <em>метр</em></li>
+                    <li><input
+                            type='number'
+                            class='foundation_plate subtitle'
+                            placeholder='Длина'
+                        >
+                    </li>
+                    <li class='subtitle'>единицей измерения является <em>метр</em></li>
+                    <li><input
+                            type='number'
+                            class='foundation_plate subtitle'
+                            placeholder='Толщина'
+                        >
+                    </li>
+                    <li class='subtitle'>единицей измерения является <em>метр</em></li>
+                </ul>
+            </div>
+            <button
+                id='foundation_plate_button'
+                class='child_button'
+            >
+                Посчитать
+            </button>
+            <div class='sheet interactive'>
+                <div style='display: flex; flex-direction: column; justify-content: space-between; min-height: 35pt;'>
+                    <h1>
+                        Расчёты
+                    </h1>
+                    <ol>
+                        <li> Периметр <span
+                                id='perimeter_of_concrete_base'
+                                class='product'
+                            >?</span>
+                        </li>
+                        <li> Площадь <span
+                                id='area_of_concrete_base'
+                                class='product'
+                            >?</span>
+                        </li>
+                        <li> Площадь боковой поверхности <span
+                                id='foundation_plate_area_of_side_surface'
+                                class='product'
+                            >?</span>
+                        </li>
+                        <li> Объём бетона <span
+                                id='concrete_volume'
+                                class='product'
+                            >?</span>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <div id='cylinder_volume'>
+            <div class='back'>
+                <a href='#application'>
+                    <img
+                        src='https://img.icons8.com/fluency-systems-filled/2x/arrow-pointing-left.png'
+                        width='48'
+                        height='48'
+                        style='box-sizing: border-box; margin: 0; padding: 6pt;'
+                        alt='img'
+                    >
+                </a>
+            </div>
+            <div class='sheet interactive'>
+                <img
+                    src='https://img.icons8.com/material-two-tone/2x/lightning-bolt--v2.png'
+                    width='34'
+                    height='34'
+                    class='circled darkmagenta'
+                    alt='img'
+                >
+                <h1>
+                    Объём цилиндра
+                </h1>
+                <p class='message'>Сообщение об ошибке</p>
+                <ul>
+                    <li><input
+                            type='number'
+                            class='cylinder_volume subtitle'
+                            placeholder='Диаметр'
+                        >
+                    </li>
+                    <li class='subtitle'>единицей измерения является <em>метр</em></li>
+                    <li><input
+                            type='number'
+                            class='cylinder_volume subtitle'
+                            placeholder='Высота'
+                        >
+                    </li>
+                    <li class='subtitle'>единицей измерения является <em>метр</em></li>
+                    <li><input
+                            type='number'
+                            class='cylinder_volume subtitle'
+                            placeholder='Уровень жидкости'
+                        >
+                    </li>
+                    <li class='subtitle'> единицей измерения является <em>килограмм делённый на кубический метр</em></li>
+                </ul>
+            </div>
+            <button
+                id='cylinder_volume_button'
+                class='child_button'
+            >
+                Посчитать
+            </button>
+            <div class='sheet interactive'>
+                <div style='display: flex; flex-direction: column; justify-content: space-between; min-height: 35pt;'>
+                    <h1>
+                        Расчёты
+                    </h1>
+                    <ol>
+                        <li> Объём <span
+                                id='cylinder_volume_0'
+                                class='product'
+                            >?</span>
+                        </li>
+                        <li> Площадь основания <span
+                                id='area_of_base'
+                                class='product'
+                            >?</span>
+                        </li>
+                        <li> Площадь боковой поверхности <span
+                                id='area_of_side_surface'
+                                class='product'
+                            >?</span>
+                        </li>
+                        <li> Объём жидкости <span
+                                id='liquid_volume'
+                                class='product'
+                            >?</span>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <div id='parallelepiped_volume'>
+            <div class='back'>
+                <a href='#application'>
+                    <img
+                        src='https://img.icons8.com/fluency-systems-filled/2x/arrow-pointing-left.png'
+                        width='48'
+                        height='48'
+                        style='box-sizing: border-box; margin: 0; padding: 6pt;'
+                        alt='img'
+                    >
+                </a>
+            </div>
+            <div class='sheet interactive'>
+                <img
+                    src='https://img.icons8.com/material-two-tone/2x/lightning-bolt--v2.png'
+                    width='34'
+                    height='34'
+                    class='circled darkmagenta'
+                    alt='img'
+                >
+                <h1>
+                    Объём параллелепипеда
+                </h1>
+                <p class='message'>Сообщение об ошибке</p>
+                <ul>
+                    <li><input
+                            type='number'
+                            class='parallelepiped_volume subtitle'
+                            placeholder='Ширина'
+                        >
+                    </li>
+                    <li class='subtitle'>единицей измерения является <em>метр</em></li>
+                    <li><input
+                            type='number'
+                            class='parallelepiped_volume subtitle'
+                            placeholder='Высота'
+                        >
+                    </li>
+                    <li class='subtitle'>единицей измерения является <em>метр</em></li>
+                    <li><input
+                            type='number'
+                            class='parallelepiped_volume subtitle'
+                            placeholder='Глубина'
+                        >
+                    </li>
+                    <li class='subtitle'>единицей измерения является <em>метр</em></li>
+                    <li><input
+                            type='number'
+                            class='parallelepiped_volume subtitle'
+                            placeholder='Уровень жидкости'
+                        >
+                    </li>
+                    <li class='subtitle'>единицей измерения является <em>метр</em></li>
+                </ul>
+            </div>
+            <button
+                id='parallelepiped_volume_button'
+                class='child_button'
+            >
+                Посчитать
+            </button>
+            <div class='sheet interactive'>
+                <div style='display: flex; flex-direction: column; justify-content: space-between; min-height: 35pt;'>
+                    <h1>
+                        Расчёты
+                    </h1>
+                    <ol style='min-width: 160pt;'>
+                        <li> Объём <span
+                                id='volume'
+                                class='product'
+                            >?</span>
+                        </li>
+                        <li> Объём жидкости <span
+                                id='liquid_volume_0'
+                                class='product'
+                            >?</span>
+                        </li>
+                        <li> Свободный объём <span
+                                id='remaining_volume'
+                                class='product'
+                            >?</span>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <div id='lumber_volume_from_count'>
+            <div class='back'>
+                <a href='#application'>
+                    <img
+                        src='https://img.icons8.com/fluency-systems-filled/2x/arrow-pointing-left.png'
+                        width='48'
+                        height='48'
+                        style='box-sizing: border-box; margin: 0; padding: 6pt;'
+                        alt='img'
+                    >
+                </a>
+            </div>
+            <div class='sheet interactive'>
+                <img
+                    src='https://img.icons8.com/material-two-tone/2x/lightning-bolt--v2.png'
+                    width='34'
+                    height='34'
+                    class='circled darkcyan'
+                    alt='img'
+                >
+                <h1>
+                    Объём пиломатериалов по количеству
+                </h1>
+                <p class='message'>Сообщение об ошибке</p>
+                <ul>
+                    <li><input
+                            type='number'
+                            class='lumber_volume_from_count_button subtitle'
+                            placeholder='Длина'
+                        >
+                    </li>
+                    <li class='subtitle'>единицей измерения является <em>метр</em></li>
+                    <li><input
+                            type='number'
+                            class='lumber_volume_from_count_button subtitle'
+                            placeholder='Ширина'
+                        >
+                    </li>
+                    <li class='subtitle'>единицей измерения является <em>метр</em></li>
+                    <li><input
+                            type='number'
+                            class='lumber_volume_from_count_button subtitle'
+                            placeholder='Толщина'
+                        >
+                    </li>
+                    <li class='subtitle'>единицей измерения является <em>метр</em></li>
+                    <li><input
+                            type='number'
+                            class='lumber_volume_from_count_button subtitle'
+                            placeholder='Количество'
+                        >
+                    </li>
+                    <li class='subtitle'> единицей измерения является <em>штука</em></li>
+                    <li><input
+                            type='number'
+                            class='lumber_volume_from_count_button subtitle'
+                            placeholder='Стоимость за кубический метр'
+                        >
+                    </li>
+                    <li class='subtitle'> единицей измерения является <em>рубль</em></li>
+                </ul>
+            </div>
+            <button
+                id='lumber_volume_from_count_button'
+                class='child_button'
+            >
+                Посчитать
+            </button>
+            <div class='sheet interactive'>
+                <div style='display: flex; flex-direction: column; justify-content: space-between; min-height: 35pt;'>
+                    <h1>
+                        Расчёты
+                    </h1>
+                    <ol style='min-width: 160pt;'>
+                        <li> Количество пиломатериалов в кубическом метре <span
+                                id='lumber_count_per_cubic_meter'
+                                class='product'
+                            >?</span>
+                        </li>
+                        <li> Объём одного пиломатериала <span
+                                id='lumber_volume_value'
+                                class='product'
+                            >?</span>
+                        </li>
+                        <li> Объём всего <span
+                                id='lumber_volume_all'
+                                class='product'
+                            >?</span>
+                        </li>
+                        <li> Стоимость одонго пиломатериала <span
+                                id='lumber_price'
+                                class='product'
+                            >?</span>
+                        </li>
+                        <li> Стоимость материалов <span
+                                id='material_price'
+                                class='product'
+                            >?</span>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <div id='lumber_count_from_volume'>
+            <div class='back'>
+                <a href='#application'>
+                    <img
+                        src='https://img.icons8.com/fluency-systems-filled/2x/arrow-pointing-left.png'
+                        width='48'
+                        height='48'
+                        style='box-sizing: border-box; margin: 0; padding: 6pt;'
+                        alt='img'
+                    >
+                </a>
+            </div>
+            <div class='sheet interactive'>
+                <img
+                    src='https://img.icons8.com/material-two-tone/2x/lightning-bolt--v2.png'
+                    width='34'
+                    height='34'
+                    class='circled darkcyan'
+                    alt='img'
+                >
+                <h1>
+                    Количество пиломатериалов по объёму
+                </h1>
+                <p class='message'>Сообщение об ошибке</p>
+                <ul>
+                    <li><input
+                            type='number'
+                            class='lumber_count_from_volume subtitle'
+                            placeholder='Длина'
+                        >
+                    </li>
+                    <li class='subtitle'>единицей измерения является <em>метр</em></li>
+                    <li><input
+                            type='number'
+                            class='lumber_count_from_volume subtitle'
+                            placeholder='Ширина'
+                        >
+                    </li>
+                    <li class='subtitle'>единицей измерения является <em>метр</em></li>
+                    <li><input
+                            type='number'
+                            class='lumber_count_from_volume subtitle'
+                            placeholder='Толщина'
+                        >
+                    </li>
+                    <li class='subtitle'>единицей измерения является <em>метр</em></li>
+                    <li><input
+                            type='number'
+                            class='lumber_count_from_volume subtitle'
+                            placeholder='Количество'
+                        >
+                    </li>
+                    <li class='subtitle'> единицей измерения является <em>кубический метр</em></li>
+                    <li><input
+                            type='number'
+                            class='lumber_count_from_volume subtitle'
+                            placeholder='Стоимость за кубический метр'
+                        >
+                    </li>
+                    <li class='subtitle'> единицей измерения является <em>рубль</em></li>
+                </ul>
+            </div>
+            <button
+                id='lumber_count_from_volume_button'
+                class='child_button'
+            >
+                Посчитать
+            </button>
+            <div class='sheet interactive'>
+                <div style='display: flex; flex-direction: column; justify-content: space-between; min-height: 35pt;'>
+                    <h1>
+                        Расчёты
+                    </h1>
+                    <ol style='min-width: 160pt;'>
+                        <li> Количество пиломатериалов в кубическом метре <span
+                                id='lumber_count_per_cubic_meter_0'
+                                class='product'
+                            >?</span>
+                        </li>
+                        <li> Объём одного пиломатериала <span
+                                id='lumber_volume'
+                                class='product'
+                            >?</span>
+                        </li>
+                        <li> Объём всего <span
+                                id='lumber_volume_in_specified_volume'
+                                class='product'
+                            >?</span>
+                        </li>
+                        <li> Стоимость одонго пиломатериала <span
+                                id='lumber_price_0'
+                                class='product'
+                            >?</span>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <div id='bricks_per_cubic_meter'>
+            <div class='back'>
+                <a href='#application'>
+                    <img
+                        src='https://img.icons8.com/fluency-systems-filled/2x/arrow-pointing-left.png'
+                        width='48'
+                        height='48'
+                        style='box-sizing: border-box; margin: 0; padding: 6pt;'
+                        alt='img'
+                    >
+                </a>
+            </div>
+            <div class='sheet interactive'>
+                <img
+                    src='https://img.icons8.com/material-two-tone/2x/lightning-bolt--v2.png'
+                    width='34'
+                    height='34'
+                    class='circled midnightblue'
+                    alt='img'
+                >
+                <h1>
+                    Количество кирпичей в кубическом метре
+                </h1>
+                <p class='message'>Сообщение об ошибке</p>
+                <ul>
+                    <li><input
+                            type='number'
+                            class='input_bricks_per_cubic_meter subtitle'
+                            placeholder='Длина кирпича (блока)'
+                        >
+                    </li>
+                    <li class='subtitle'> единицей измерения является <em>миллиметр</em></li>
+                    <li><input
+                            type='number'
+                            class='input_bricks_per_cubic_meter subtitle'
+                            placeholder='Ширина кирпича (блока)'
+                        >
+                    </li>
+                    <li class='subtitle'> единицей измерения является <em>миллиметр</em></li>
+                    <li><input
+                            type='number'
+                            class='input_bricks_per_cubic_meter subtitle'
+                            placeholder='Высота кирпича (блока)'
+                        >
+                    </li>
+                    <li class='subtitle'> единицей измерения является <em>миллиметр</em></li>
+                </ul>
+            </div>
+            <button
+                id='bricks_per_cubic_meter_button'
+                class='child_button'
+            >
+                Посчитать
+            </button>
+            <div class='sheet interactive'>
+                <div style='display: flex; flex-direction: column; justify-content: space-between; min-height: 35pt;'>
+                    <h1>
+                        Расчёты
+                    </h1>
+                    <ol style='min-width: 160pt;'>
+                        <li> Количество кирпичей (блоков) в кубическом метре <span
+                                id='brick_count_per_cubic_meter'
+                                class='product'
+                            >?</span>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
